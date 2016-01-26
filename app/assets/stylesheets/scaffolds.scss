@@ -1,8 +1,10 @@
-html {
+body {
   background-color: #F1F1F1; 
-} /* html */
+} /* body */
+
 
 header {
+  margin-top: 70px;
   h1 {
     font-size: 50px;
     text-transform: uppercase;
@@ -11,6 +13,13 @@ header {
     font-family: 'Halant', serif;
     font-weight: 300;
     color: gray;
+    a {
+      &:hover {
+        background-color: transparent; 
+        text-decoration: none;
+        color: darkgray;
+      } /* &:hover */ 
+    } /* a */
   } /* h1 */
 } /* header */
 
