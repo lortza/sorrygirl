@@ -12,7 +12,6 @@ article {
   background-color: #FFF;
   clear: both;
   overflow: hidden;
-  // width: 650px;
   height: auto;
   min-height: 300px;
   .note {
@@ -40,5 +39,35 @@ article {
 
 
 
+
+/* MEDIA QUERIES */
+
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+  .apology-wrapper {
+    width: 100%; 
+    margin: 0 auto;
+  } /* .apology-wrapper */
+    
+  article {
+    // overflow: hidden;
+    // height: auto;
+    // min-height: 200px;
+    .note {
+      padding: 20px 20px 5px 20px; 
+      p {
+        font-family: 'Rock Salt', cursive;
+        font-size: 130%;
+        line-height: 150%;
+      } /* p */
+    } /* .note */
+      
+    img {
+       max-height: 650px;
+       width: 100%;
+       margin-bottom: 30px; 
+     } /* img */
+  } /* article */
+
+}/* 480px */
   
   

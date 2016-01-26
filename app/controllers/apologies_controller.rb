@@ -6,7 +6,7 @@ class ApologiesController < ApplicationController
   # GET /apologies
   # GET /apologies.json
   def index
-    @apologies = Apology.all
+    @apologies = Apology.all.order("created_at DESC")
   end
 
   # GET /apologies/1

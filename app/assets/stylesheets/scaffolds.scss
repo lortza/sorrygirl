@@ -143,3 +143,16 @@ div {
     list-style: square;
   }
 }
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-device-width: 480px) and (orientation: portrait) {
+
+  .form-box {
+    margin: 0 auto;
+    width: 100%;
+    padding: 30px; 
+  } /* .form-box */
+
+}/* 480px */
