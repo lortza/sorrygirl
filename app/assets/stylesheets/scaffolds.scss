@@ -4,7 +4,7 @@ body {
 
 
 header {
-  margin-top: 70px;
+  margin: 70px 0px 50px 0px;
   h1 {
     font-size: 50px;
     text-transform: uppercase;
@@ -39,11 +39,43 @@ h1 {
   padding: 30px; 
 } /* .form-box */
 
+
+/* NAVBAR */
+
 ul.copyright {
   color: #979797;
   padding-top: 13px;
   list-style: none; 
 } /* ul.copyright */
+
+.brand {
+  font-family: 'Rock Salt', cursive; 
+  color: magenta;
+} /* .-brand */
+
+
+
+
+/* SHAREABLE */
+nav.share {
+  display:inline-block;
+  margin-top: 30px;
+  } /* shareable's nav tag */
+nav.share div {float:left;}
+nav.share iframe {border:0; margin-top:0; padding-top:0;} /* if using medium sized buttons */
+#___plusone_0 {font-size: default !important;}
+.fb_iframe_widget span { vertical-align: top; }
+.fb_edge_widget_with_comment { vertical-align: top;}
+.fb-like{display:inline-block}
+* html .fb-like{display:inline}/* ie6 inline block fix*/
+*+html .fb-like{display:inline}/* ie7 inline block fix*/
+  
+
+
+
+
+/* SCAFFOLD STYLES */
+
 
 
 p, ol, ul, td {

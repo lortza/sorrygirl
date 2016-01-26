@@ -30,7 +30,7 @@ class ApologiesController < ApplicationController
 
     respond_to do |format|
       if @apology.save
-        format.html { redirect_to @apology, notice: 'Apology was successfully created.' }
+        format.html { redirect_to @apology }
         format.json { render :show, status: :created, location: @apology }
       else
         format.html { render :new }

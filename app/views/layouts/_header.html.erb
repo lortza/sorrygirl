@@ -8,13 +8,13 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Sorry Girl</a>
+      <a class="navbar-brand" href="/"><span class="brand">Sorry Girl</span></a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li><%= link_to "Make a New Apology", new_apology_path %></li>
+        <li><%= link_to "Write an Apology", new_apology_path %></li>
       <% if current_user %>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Apologies <span class="caret"></span></a>
@@ -34,7 +34,8 @@
         <% end %><!-- if current_user -->
       </ul>
       <ul class="pull-right copyright">
-          <li>Copyright &copy; <%= Time.now.year %></li>
+        <li><%= link_to "Admin", new_session_path %></li>
+        <li>Copyright &copy; <%= Time.now.year %></li>
       </ul> <!-- pull-right -->
       
     </div><!-- /.navbar-collapse -->
@@ -44,3 +45,4 @@
 <header>
   <h1><%= link_to "Ryan Gosling Apologizes", new_apology_path %></h1>
 </header>
+
