@@ -4,7 +4,7 @@ class Apology < ActiveRecord::Base
 
   before_save :generate_image
 
-  validates :body, presence: true, length: { maximum: 200}
+  validates :body, presence: true, length: { maximum: 220}
 
 
   def generate_image
