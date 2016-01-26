@@ -1,0 +1,22 @@
+<div class="form-box">
+
+  <h1>Sign In</h1>
+
+  <%= form_tag(session_path) do %>
+    <fieldset>
+        <div class="required">
+          <%= label_tag :email %>
+          <%= email_field_tag :email, nil, autofocus: true, size: 40 %>
+        </div>
+        <div class="required">
+          <%= label_tag :password %>
+          <%= password_field_tag :password, nil, size: 40 %>
+        </div>
+      <p>
+        <%= submit_tag 'Sign In' %>
+      </p>
+    </fieldset>
+  <% end %>  
+
+</div> <!-- form-box -->
+
