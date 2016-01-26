@@ -1,67 +1,33 @@
-<!-- Navigation -->
-<nav class="navbar navbar-default" role="navigation">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/"><%= image_tag("logo.png") %>Sorry Girl</a>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Sorry Girl</a>
+    </div>
 
-        </div>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-
-              <% if current_user %>
-                 <li class="dropdown">
-                 <a href="#" class="dropdown-toggle fa fa-heart" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Apologies <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><%= link_to "Apologies Index", apoligies_path %></li>
-                    <li><%= link_to "Create New Apology", new_apology_path %></li>
-                  </ul><!-- manage Reactions items -->
-                 </li><!-- manage Reactions dropdown -->
-
-                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle fa fa-user" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Users <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><%= link_to "Users Index", users_path %></li>
-                    <li><%= link_to "New User", new_user_path %></li>
-                  </ul><!-- manage Users items -->
-                </li><!-- manage Users dropdown -->
-
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle fa fa-cog" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> <%= current_user.name %> <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><%= link_to "Your Profile", current_user %></li>
-                    <li><%= link_to "Account Settings", edit_user_path(current_user) %></li>
-                  </ul><!-- user settings items -->
-                </li><!-- User Settings Dropdown -->
-                <li><%= link_to "Sign Out", session_path, method: :delete, class: "button" %></li>
-              <% end %><!-- if current_user -->
-                
-                <ul class="nav navbar-nav navbar-right"> 
-                <% unless current_user %>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Admin Area<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                      <li><%= link_to "Sign In", new_session_path, class: "button" %></li>
-                    </ul><!-- Admin Area dropdown items -->
-                  </li><!-- Admin Area dropdown -->
-                  <% end %><!-- unless current_user -->
-                  </ul><!-- nav navbar-nav navbar-right -->
-                  <li>  </li>
-
-            </ul><!-- nav navbar-nav -->
-            <ul class="pull-right copyright">
-               <li>Copyright &copy; <%= Time.now.year %></li>
-            </ul> <!-- pull-right -->
-            
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container -->
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Apologies <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><%= link_to "Apologies Index", apologies_path %></li>
+            <li><%= link_to "Create New Apology", new_apology_path %></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="pull-right copyright">
+          <li>Copyright &copy; <%= Time.now.year %></li>
+      </ul> <!-- pull-right -->
+      
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
 </nav>
 
 <header>
