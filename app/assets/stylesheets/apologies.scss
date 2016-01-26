@@ -1,0 +1,32 @@
+// Place all the styles related to the Apologies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+  
+
+article {
+  border: 1px solid #A1A1A1;
+  background-color: #FFF;
+  margin: 0 auto;
+  overflow: hidden;
+  width: 650px;
+  height: auto;
+  min-height: 300px;
+  .note {
+    padding: 30px 30px 5px 30px; 
+    p {
+      font-family: 'Rock Salt', cursive;
+      font-size: 1.2em;
+      line-height: 120%;
+    } /* p */
+  } /* .note */
+    
+  img {
+     height: auto;
+     max-height: 400px;
+     float: left;
+     margin-right: 30px; 
+   } /* img */
+      
+} /* article */
+  
+  

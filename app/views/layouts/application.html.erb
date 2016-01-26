@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sorrygirl</title>
+  <link href='https://fonts.googleapis.com/css?family=Halant:400,300|Rock+Salt' rel='stylesheet' type='text/css'>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="container">
+
+  <%= render "layouts/header" %>
+
+  <%= yield %>
+     
+  </div> <!-- container -->
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Apologies Index</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Body</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @apologies.each do |apology| %>
+      <tr>
+        <td><%= truncate(apology.body, length: 75, separator: ' ') %></td>
+        <td><%= apology.image %></td>
+        <td><%= link_to 'Show', apology %></td>
+        <td><%= link_to 'Edit', edit_apology_path(apology) %></td>
+        <td><%= link_to 'Destroy', apology, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Apology', new_apology_path %>

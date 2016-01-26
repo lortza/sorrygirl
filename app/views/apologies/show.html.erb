@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+   
+<article>
+  <%= image_tag(@apology.image) %>
+  <div class="note">
+    <p>Sorry Girl,</p>
+    <p><%= @apology.body %></p>
+    <p>Love,<br>
+    Ryan</p>
+  </div> <!-- note -->
+
+</article>
+
+<center>
+  <%= link_to 'Edit', edit_apology_path(@apology) %> |
+<%= link_to 'Back', apologies_path %>
+</center>
+
