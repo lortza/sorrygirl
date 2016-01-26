@@ -1,10 +1,41 @@
-body {
-  background-color: #fff;
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-}
+html {
+  background-color: #F1F1F1; 
+} /* html */
+
+header {
+  h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+    letter-spacing: 8px; 
+    text-align: center;
+    font-family: 'Halant', serif;
+    font-weight: 300;
+    color: gray;
+  } /* h1 */
+} /* header */
+
+h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+  letter-spacing: 3px; 
+  font-family: 'Halant', serif;
+  font-weight: 300;
+  color: gray;
+   
+} /* h1 */
+
+.form-box {
+  margin: 0 auto;
+  width: 30%;
+  padding: 30px; 
+} /* .form-box */
+
+ul.copyright {
+  color: #979797;
+  padding-top: 13px;
+  list-style: none; 
+} /* ul.copyright */
+
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;

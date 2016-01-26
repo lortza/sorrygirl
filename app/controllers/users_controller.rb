@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
-  before_action :require_signin
+  # before_action :require_signin
 
 
   # GET /users
@@ -39,7 +39,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to @user, notice: "#{@user.name}'s account has been successfully updated."
+      redirect_to @user, notice: "#{@user.first_name}'s account has been successfully updated."
     else
       render :edit
     end #if
@@ -47,13 +47,13 @@ class UsersController < ApplicationController
   
   def destroy
     @user.destroy
-    redirect_to root_url, alert: "#{@user.name}'s account has been successfully deleted."
+    redirect_to root_url, alert: "#{@user.first_name}'s account has been successfully deleted."
   end #destroy
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
-      @user = User.find(params[:id])
+      @user = User.find_by!(username: params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

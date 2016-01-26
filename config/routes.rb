@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+
   resources :users
   resources :apologies
+  resource :session
 
   root 'apologies#new'
 

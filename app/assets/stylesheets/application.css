@@ -13,6 +13,6 @@
  *= require_tree .
  *= require_self
  *= apologies
- *= layouts
+ *= scaffolds
  *= forms
  */

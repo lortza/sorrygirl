@@ -1,6 +1,8 @@
 class ApologiesController < ApplicationController
   before_action :set_apology, only: [:show, :edit, :update, :destroy]
 
+  before_action :require_signin, except: [:show, :new, :create]
+
   # GET /apologies
   # GET /apologies.json
   def index
