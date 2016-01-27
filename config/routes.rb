@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
+  
   get 'sessions/new'
 
   resources :users
   resources :apologies
   resource :session
+  resources :pages
 
-  root 'apologies#new'
+  root 'pages#home'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
