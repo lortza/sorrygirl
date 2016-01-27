@@ -47,9 +47,8 @@ class UsersController < ApplicationController
   
   def destroy
     @user.destroy
-    unless @user == current_user
-      session[:user_id] = nil
-    end
+    #TODO: make this so a user can delete another user without being signed out
+    session[:user_id] = nil
     redirect_to root_url, alert: "#{@user.first_name}'s account has been successfully deleted."
   end #destroy
 
