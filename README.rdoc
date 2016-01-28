@@ -1,28 +1,13 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Write an apology... and it comes from Ryan Gosling. Send it to a friend via social media or the URL. 
+https://sorrygirl.herokuapp.com/
 
-Things you may want to cover:
+* Ruby version 2.2.1
 
-* Ruby version
+* Rails version 4.2.3
 
-* System dependencies
+* Database pg
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+=== Deployment Note
+You will need to run the seeds file in order to set up the Home and About pages.
