@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get 'sessions/new'
 
   resources :users
+
+  get "admin" => "sessions#new"
   resources :apologies
   resource :session
   resources :pages
