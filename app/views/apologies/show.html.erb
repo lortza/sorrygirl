@@ -3,7 +3,10 @@
 <div class="apology-wrapper">
   
   <div class="create-button-wrapper">
-    <%= link_to " Write an Apology", new_apology_path, class: "btn btn-default btn-sm fa fa-pencil" %> 
+    <%= link_to " Write an Apology", new_apology_path, class: "btn btn-default btn-sm fa fa-plus" %> 
+    <% if current_user %>
+    <%= link_to " Edit", edit_apology_path, class: "btn btn-default btn-sm fa fa-pencil" %>
+    <% end %><!-- current_user -->
   </div> <!-- create-button-wrapper -->
      
   <article>

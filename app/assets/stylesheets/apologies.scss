@@ -8,6 +8,7 @@
 } /* .apology-wrapper */
   
 article {
+  font-family: 'Rock Salt', cursive;
   border: 1px solid #A1A1A1;
   background-color: #FFF;
   clear: both;
@@ -16,6 +17,11 @@ article {
   min-height: 300px;
   .note {
     padding: 30px 30px 5px 30px; 
+    h3 {
+      font-family: 'Rock Salt', cursive; 
+      margin-bottom: 30px;
+    } /* h3 */
+      
     p {
       font-family: 'Rock Salt', cursive;
       font-size: 1.3em;
