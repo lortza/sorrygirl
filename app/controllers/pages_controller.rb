@@ -1,8 +1,12 @@
 class PagesController < ApplicationController
   before_action :set_page, only: [:show, :edit, :update, :destroy]
+  #before_action :set_page, except: [:home, :index, :new, :create]
+
+  before_action :require_signin, except: [:show, :home]
+
 
   def home
-    @page = Page.find_by!(slug: "home")
+    @page = Page.find_by!(slug: "static-home-page")
   end #home
     
 
@@ -74,6 +78,6 @@ class PagesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def page_params
-      params.require(:page).permit(:name, :slug, :heading, :body)
+      params.require(:page).permit(:name, :slug, :heading, :body, :publish_status)
     end
 end
