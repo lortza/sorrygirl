@@ -3,14 +3,16 @@
 <div class="apology-wrapper">
   
   <div class="create-button-wrapper">
-    <%= link_to " Write an Apology", new_apology_path, class: "btn btn-default btn-sm fa fa-pencil" %> 
+    <% if current_user %>
+    <%= link_to " Edit", edit_page_path, class: "btn btn-default btn-sm fa fa-pencil" %>
+    <% end %>
   </div> <!-- create-button-wrapper -->
      
-  <article>
+  <article class="pages">
     <%= image_tag("ryan-gosling01.jpg") %>
     <div class="note">
-      <p><%= @page.heading %></p>
-      <p><%= @page.body %></p>
+      <h3><%= @page.heading %></h3>
+      <p><%= simple_format(@page.body) %></p>
     </div> <!-- note -->
   </article>
     <%= render "layouts/social_icons" %>

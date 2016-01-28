@@ -2,13 +2,16 @@
 
 <div class="container">
 
-<h1>Listing Pages</h1>
+<h1>Pages Index</h1>
+<%= link_to ' New Page', new_page_path, class: "btn btn-default btn-sm fa fa-plus" %>
+
 
 <table class="table">
   <thead>
     <tr>
       <th>Name</th>
-      <th>URL</th>
+      <th>Publish Status</th>
+      <th>Permalink</th>
       <th>Heading</th>
       <th>Body</th>
       <th colspan="3">Manage</th>
@@ -19,6 +22,7 @@
     <% @pages.each do |page| %>
       <tr>
         <td><%= page.name %></td>
+        <td><%= page.publish_status %></td>
         <td><%= page.slug %></td>
         <td><%= page.heading %></td>
         <td><%= page.body %></td>
@@ -32,6 +36,5 @@
 
 <br>
 
-<%= link_to 'New Page', new_page_path %>
 
 </div><!-- container -->

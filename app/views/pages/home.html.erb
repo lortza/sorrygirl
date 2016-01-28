@@ -1,19 +1,23 @@
 <p id="notice"><%= notice %></p>
 
 <div class="apology-wrapper">
-  
   <div class="create-button-wrapper">
-    <%= link_to " Write an Apology", new_apology_path, class: "btn btn-default btn-sm fa fa-pencil" %> 
+    <% if current_user %>
+    <%= link_to " Edit", edit_page_path(@page), class: "btn btn-default btn-sm fa fa-pencil" %>
+    <% end %><!-- current_user -->
   </div> <!-- create-button-wrapper -->
      
-  <article>
+  <article class="pages">
     <%= image_tag("ryan-gosling01.jpg") %>
     <div class="note">
-      <p>Sorry Girl,</p>
-      <p><%= @page.body %></p>
-      <%= link_to "Write an Apology", new_apology_path, class: "btn btn-warning btn-xl" %>
+      <p>Hey Girl,</p>
+      <p><%= simple_format(@page.body) %></p>
+      <div class="btn-wrapper">
+        <%= link_to "Write an Apology", new_apology_path, class: "btn btn-primary btn-xl" %>
+      </div> <!-- btn-wrapper -->
+        
     </div> <!-- note -->
-  </article>
+  </article><!-- pages -->
     <%= render "layouts/social_icons" %>
 
 </div> <!-- apology-wrapper -->

@@ -1,6 +1,9 @@
-<h1>Editing Page</h1>
+<div class="form-box">
 
-<%= render 'form' %>
+  <h1>Edit <%= @page.name %></h1>
 
-<%= link_to 'Show', @page %> |
-<%= link_to 'Back', pages_path %>
+  <%= render 'form' %>
+
+  <%= link_to 'Show', @page %> |
+  <%= link_to 'Back', pages_path %>  
+</div> <!-- form-box -->

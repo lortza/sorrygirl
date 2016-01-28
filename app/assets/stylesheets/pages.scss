@@ -1,3 +1,22 @@
 // Place all the styles related to the Pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+article.pages {    
+   p {
+     font-size: 20px; 
+   } /* p */
+   .btn-wrapper {
+     text-align: center; 
+   } /* .btn-wrapper */
+     
+   a.btn {
+    font-family: "Helvetica", sans-serif;
+     margin: 15px 0px;
+     padding: 10px 20px;
+     font-size: 20px; 
+     border-radius: 10px;
+     color: white;
+   } /* .btn */
+} /* article */
+  

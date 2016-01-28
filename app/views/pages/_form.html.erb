@@ -12,12 +12,12 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.label :name, "Page Name" %><br>
+    <%= f.text_field :name, autofocus: true %>
   </div>
   <% unless @page.new_record? %>
     <div class="field">
-      <%= f.label :slug %><br>
+      <%= f.label :slug, "Permalink" %><br>
       <%= f.text_field :slug %>
     </div>
   <% end %>
@@ -28,7 +28,11 @@
   </div>
   <div class="field">
     <%= f.label :body %><br>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, cols: 40, rows: 7 %>
+  </div>
+  <div class="field">
+    <%= f.label :publish_status, "Set Publish Status" %><br>
+    <%= f.select :publish_status, Page::PUBLISH_STATUS %>
   </div>
   <div class="actions">
     <%= f.submit %>
