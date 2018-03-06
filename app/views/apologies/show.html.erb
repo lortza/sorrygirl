@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <div class="apology-wrapper">
-  
+
   <div class="create-button-wrapper">
-    <%= link_to " Write an Apology", new_apology_path, class: "btn btn-default btn-sm fa fa-plus" %> 
+    <%= link_to " Write an Apology", new_apology_path, class: "btn btn-sm btn-primary btn-sm" %>
     <% if current_user %>
-    <%= link_to " Edit", edit_apology_path, class: "btn btn-default btn-sm fa fa-pencil" %>
+    <%= link_to " Edit", edit_apology_path, class: "btn btn-default btn-sm" %>
     <% end %><!-- current_user -->
   </div> <!-- create-button-wrapper -->
-     
+
   <article>
     <%= image_tag(@apology.image) %>
     <div class="note">
@@ -18,7 +18,8 @@
       Ryan</p>
     </div> <!-- note -->
   </article>
-    <%= render "layouts/social_icons" %>
+
+  <%= render "layouts/social_icons" %>
 
 </div> <!-- apology-wrapper -->
 
