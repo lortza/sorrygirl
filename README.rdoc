@@ -1,13 +1,13 @@
 == README
 
-Write an apology... and it comes from Ryan Gosling. Send it to a friend via social media or the URL. 
+Write an apology... and it comes from Ryan Gosling. Send it to a friend via social media or the URL.
 https://sorrygirl.herokuapp.com/
 
-* Ruby version 2.2.1
+* Ruby 2.2.4
 
-* Rails version 4.2.3
+* Rails 4.2.10
 
-* Database pg
+* Postgres 0.21
 
 === Deployment Note
 You will need to run the seeds file in order to set up the Home and About pages.
