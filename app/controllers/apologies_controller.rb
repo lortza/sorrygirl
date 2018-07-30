@@ -4,7 +4,7 @@ class ApologiesController < ApplicationController
   before_action :require_signin, except: [:show, :new, :create]
 
   def index
-    @apologies = Apology.all.order("created_at DESC")
+    @apologies = Apology.ordered
   end
 
   def show
