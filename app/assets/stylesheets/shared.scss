@@ -1,48 +1,51 @@
+@import 'theme';
+
 body {
-  background-color: #F1F1F1; 
+  background-color: $background-color;
   padding-bottom: 150px;
-} /* body */
+}
 
 
 header {
   margin: 70px 0px 50px 0px;
-  h1 {
+  text-align: center;
+  color: $primary-color;
+  .title {
     font-size: 50px;
     text-transform: uppercase;
-    letter-spacing: 8px; 
-    text-align: center;
-    font-family: 'Halant', serif;
+    letter-spacing: 8px;
+    font-family: $classy-font;
     font-weight: 300;
-    color: gray;
     a {
-      &:visited {
-        color: lighten(gray, 11%); 
-      } /* &:visited */
+      color: $primary-color;
       &:hover {
-        background-color: transparent; 
+        background-color: transparent;
         text-decoration: none;
-        color: gray;
-      } /* &:hover */ 
-      
-        
+        color: darken($primary-color, 10%);
+      } /* &:hover */
     } /* a */
   } /* h1 */
+  .subtitle {
+    font-family: $apology-font;
+    font-size: 98%;
+    margin-top: 0;
+  }
 } /* header */
 
 h1 {
   font-size: 20px;
   text-transform: uppercase;
-  letter-spacing: 3px; 
-  font-family: 'Halant', serif;
+  letter-spacing: 3px;
+  font-family: $classy-font;
   font-weight: 300;
   color: gray;
-   
+
 } /* h1 */
 
 .form-box {
   margin: 0 auto;
   width: 30%;
-  padding: 30px; 
+  padding: 30px;
 } /* .form-box */
 
 
@@ -51,18 +54,16 @@ h1 {
 ul.copyright {
   color: #979797;
   padding-top: 13px;
-  list-style: none; 
+  list-style: none;
 } /* ul.copyright */
 
 .brand {
-  font-family: 'Rock Salt', cursive; 
+  font-family: $apology-font;
   color: magenta;
-} /* .-brand */
+} /* .brand */
 
 
-
-
-/* SHAREABLE */
+/* SHAREABLE GEM */
 nav.share {
   display:inline-block;
   margin-top: 30px;
@@ -75,15 +76,12 @@ nav.share iframe {border:0; margin-top:0; padding-top:0;} /* if using medium siz
 .fb-like{display:inline-block}
 * html .fb-like{display:inline}/* ie6 inline block fix*/
 *+html .fb-like{display:inline}/* ie7 inline block fix*/
-  
+
 
 
 
 
 /* SCAFFOLD STYLES */
-
-
-
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -95,19 +93,6 @@ pre {
   padding: 10px;
   font-size: 11px;
 }
-
-// a {
-//   color: #000;
-
-//   &:visited {
-//     color: #666;
-//   }
-
-//   &:hover {
-//     color: #fff;
-//     background-color: #000;
-//   }
-// }
 
 div {
   &.field, &.actions {
@@ -158,7 +143,7 @@ div {
   .form-box {
     margin: 0 auto;
     width: 100%;
-    padding: 30px; 
+    padding: 30px;
   } /* .form-box */
 
 }/* 480px */
