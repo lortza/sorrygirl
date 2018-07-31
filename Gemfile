@@ -36,7 +36,6 @@ gem 'bcrypt', '~> 3.1.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-# gem 'shareable' # social media sharing buttons
 gem 'social-share-button' # social media sharing buttons
 
 group :development, :test do

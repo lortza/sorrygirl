@@ -1,4 +1,4 @@
-<%= render "shared/social_icons" %>
+<%= social_share_button_tag(page_description, :url => request.original_url, desc: page_description, title: page_title) %>
 
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-bottom">
   <a class="navbar-brand" href="/"><span class="brand">Sorry Girl</span></a>

@@ -4,6 +4,14 @@ module ApplicationHelper
      "Sorry Girl - #{content_for(:title)}"
     else
      "Sorry Girl - The Apology You Needed to Hear, but from Ryan Gosling"
-   end #content_for
- end #page_title
+   end
+ end
+
+ def page_description
+   if content_for?(:description)
+     "Sorry Girl - #{content_for(:description)}"
+   else
+     page_title
+   end
+ end
 end #ApplicationHelper

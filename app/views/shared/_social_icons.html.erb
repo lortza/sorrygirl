@@ -1,4 +1,0 @@
-<center><%#= render_shareable :buttons=> ['twitter', 'facebook', 'pinterest', 'reddit'] %></center>
-
-<center><%#= social_share_button_tag(@apology.body, :url => apology_path(@apology)) %></center>
-<%= social_share_button_tag("#{@apology.body} #{apology_url(@apology)}", :url => apology_url(@apology), desc: @apology.body, title: @apology.body) %>
