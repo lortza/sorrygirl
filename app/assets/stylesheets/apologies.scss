@@ -46,6 +46,18 @@ article {
 } /* .index-image */
 
 
+/* Javascript Form Character Count */
+.character-count-container {
+  float: right;
+  color: $secondary-color;
+  font-size: 0.75em;
+}
+
+.exceeded-limit {
+  .character-count-container { color: red; }
+  textarea { border: 2px solid red; }
+}
+
 
 /* MEDIA QUERIES */
 

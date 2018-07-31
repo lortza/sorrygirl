@@ -44,10 +44,12 @@ h1 {
 } /* h1 */
 
 .form-box {
-  margin: 0 auto;
-  width: 30%;
-  padding: 30px;
-} /* .form-box */
+  textarea.form-control {
+    width: 100%;
+    height: 200px;
+    font-family: $apology-font;
+  }
+}
 
 
 /* NAVBAR */
@@ -141,10 +143,6 @@ div {
 
 @media screen and (max-device-width: 480px) and (orientation: portrait) {
 
-  .form-box {
-    margin: 0 auto;
-    width: 100%;
-    padding: 30px;
-  } /* .form-box */
+
 
 }/* 480px */
