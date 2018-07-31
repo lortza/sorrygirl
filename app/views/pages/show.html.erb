@@ -2,17 +2,17 @@
 
 <p id="notice"><%= notice %></p>
 
-<%= render "layouts/github_ribbon" %>
+<%= render "shared/github_ribbon" %>
 
 
 <div class="apology-wrapper">
-  
+
   <div class="create-button-wrapper">
     <% if current_user %>
     <%= link_to " Edit", edit_page_path, class: "btn btn-default btn-sm fa fa-pencil" %>
     <% end %>
   </div> <!-- create-button-wrapper -->
-     
+
   <article class="pages">
     <%= image_tag("ryan-gosling01.jpg") %>
     <div class="note">
@@ -20,8 +20,4 @@
       <p><%= simple_format(@page.body) %></p>
     </div> <!-- note -->
   </article>
-    <%= render "layouts/social_icons" %>
-
 </div> <!-- apology-wrapper -->
-
-
