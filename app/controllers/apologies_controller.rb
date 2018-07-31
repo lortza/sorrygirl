@@ -21,7 +21,7 @@ class ApologiesController < ApplicationController
     @apology = Apology.new(apology_params)
 
     if @apology.save
-      redirect_to @apology
+      redirect_to @apology, notice: "Next Step: Share your apology via the social media links below."
     else
       render :new
     end
