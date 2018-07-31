@@ -1,13 +1,5 @@
-<%= form_for(@apology) do |f| %>
-  <% if @apology.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@apology.errors.count, "error") %> prohibited this apology from being saved:</h2>
 
-      <ul>
-      <% @apology.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <%= render partial: 'shared/errors', locals: {object: @apology} %>
     </div>
   <% end %>
 
