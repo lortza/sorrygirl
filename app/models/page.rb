@@ -2,7 +2,9 @@ class Page < ActiveRecord::Base
 
   before_validation :generate_slug
 
-  validates :name, :body, presence: true
+  validates :name, presence: true
+  validates :body, presence: true, length: { maximum: 210}
+
   validates :slug, uniqueness: { case_sensitive: false }
 
   PUBLISH_STATUS = %w(Published Unpublished)
@@ -12,7 +14,7 @@ class Page < ActiveRecord::Base
 
 
   def generate_slug
-    self.slug = name.downcase 
+    self.slug = name.downcase
     self.slug ||= name.parameterize if name
   end #generate_slug
 

@@ -1,7 +1,7 @@
 document.addEventListener('turbolinks:load', function () {
   let textBox = document.querySelector('#apology-content textarea')
   let formInputArea = document.querySelector('#apology-content')
-  let characterMax = 220
+  let characterMax = 210
   let submitButton = document.querySelector('input[type=submit]')
 
   let displayRemainingCharacters = function(){
