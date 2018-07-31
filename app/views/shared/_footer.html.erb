@@ -1,1 +1,50 @@
 <%= render "shared/social_icons" %>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-bottom">
+  <a class="navbar-brand" href="/"><span class="brand">Sorry Girl</span></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a href="/pages/about" class="nav-link">About</a>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Write an Apology", new_apology_path, class: 'nav-link' %>
+      </li>
+      <% if current_user %>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Manage Content
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to "Apologies Index", apologies_path, class: 'dropdown-item' %>
+            <%= link_to "Create New Apology", new_apology_path, class: 'dropdown-item' %>
+            <%= link_to "Pages Index", pages_path, class: 'dropdown-item' %>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= current_user.first_name %>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to "Sign Out", session_path, method: :delete, class: "button", class: 'dropdown-item' %>
+            <%= link_to "My Profile", current_user, class: 'dropdown-item' %>
+            <%= link_to "All Users", users_path, class: 'dropdown-item' %>
+          </div>
+        </li>
+      <% end %><!-- if current_user -->
+    </ul>
+    <ul class="pull-right copyright">
+      <li><%= link_to "Admin", admin_path %></li>
+      <li>Copyright &copy; <%= Time.now.year %></li>
+    </ul>
+  </div>
+</nav>
