@@ -1,4 +1,4 @@
-class CreateApologies < ActiveRecord::Migration
+class CreateApologies < ActiveRecord::Migration[4.2]
   def change
     create_table :apologies do |t|
       t.text :body
