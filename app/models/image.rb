@@ -1,6 +1,8 @@
 class Image
 
   def self.select
+  IMAGES_DIRECTORY = '/assets/images/'
+  ACCEPTABLE_FORMATS = 'jpg,jpeg,png'
     self.image_file_names.sample
   end
 
@@ -17,6 +19,7 @@ class Image
 
   def self.images_directory
     '/assets/images/'
+    Dir.glob("*#{IMAGES_DIRECTORY}*.{#{ACCEPTABLE_FORMATS}}")
   end
 
 end
