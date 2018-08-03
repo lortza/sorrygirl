@@ -30,7 +30,7 @@ RSpec.describe Image, :type => :model do
 
     it "includes the acceptable formats of #{acceptable_formats}" do
       extensions = Image.filepaths.map {|path| path.match(/([^\.]+$)/)[1]}.uniq
-      all_ext_valid = extensions.all? { |ext| acceptable_formats.split(',').include?(ext) }
+      all_ext_valid = extensions.all? { |ext| acceptable_formats.include?(ext) }
 
       expect(all_ext_valid).to be true
     end
