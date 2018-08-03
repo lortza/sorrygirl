@@ -2,7 +2,7 @@ require "rails_helper"
 
 RSpec.describe Apology, :type => :model do
 
-  character_max = 170
+  character_max = Apology::CHARACTER_MAX
   string_at_char_max = 'x' * character_max
   string_over_char_max = 'x' * (character_max + 1)
 
