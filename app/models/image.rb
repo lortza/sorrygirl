@@ -8,18 +8,12 @@ class Image
   end
 
   private
-  
+
   def self.image_file_names
-    filepaths = self.retrieve_image_filepaths
-    filepaths.map { |path| path.match(/#{images_directory}(.*)/)[1] }
+    self.filepaths.map { |path| File.basename(path) }
   end
 
-  def self.retrieve_image_filepaths
-    Dir.glob("*#{images_directory}*.{jpg,png,jpeg}")
-  end
-
-  def self.images_directory
-    '/assets/images/'
+  def self.filepaths
     Dir.glob("*#{IMAGES_DIRECTORY}*.{#{ACCEPTABLE_FORMATS}}")
   end
 
