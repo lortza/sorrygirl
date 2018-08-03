@@ -1,31 +1,29 @@
 require "rails_helper"
 
 RSpec.describe Apology, :type => :model do
-
+  let(:apology) { Apology.new(body: 'lorem', image: 'image.jpg') }
   character_max = Apology::CHARACTER_MAX
   string_at_char_max = 'x' * character_max
   string_over_char_max = 'x' * (character_max + 1)
 
 
   describe 'a valid apology' do
-    it 'requires the image field' do
-      apology = Apology.new(body: 'lorem ipsum')
-      expect(apology.save).to eq(false)
+    it 'is not valid without a body' do
+      apology.body = nil
+      expect(apology).to_not be_valid
     end
 
-    it 'requires contents in the body field' do
-      apology = Apology.new(image: 'image.jpg')
-      expect(apology.save).to eq(false)
+    it 'is not valid without an image' do
+      apology.image = nil
+      expect(apology).to_not be_valid
     end
 
     it "permits up to #{character_max} characters in the body field" do
-      apology = Apology.new(image: 'image.jpg')
-
       apology.body = string_at_char_max
-      expect(apology.save).to eq(true)
+      expect(apology).to be_valid
 
       apology.body = string_over_char_max
-      expect(apology.save).to eq(false)
+      expect(apology).to_not be_valid
     end
   end
 
@@ -40,7 +38,6 @@ RSpec.describe Apology, :type => :model do
     allow(Image).to receive(:sample).and_return(filename)
 
     apology = Apology.new(body: 'lorem ipsum')
-
     expect{apology.save}.to change{apology.image}.from(nil).to(filename)
   end
 
