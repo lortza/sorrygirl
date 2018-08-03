@@ -1,8 +1,9 @@
 class Image
 
-  def self.select
   IMAGES_DIRECTORY = '/assets/images/'
   ACCEPTABLE_FORMATS = 'jpg,jpeg,png'
+
+  def self.sample
     self.image_file_names.sample
   end
 

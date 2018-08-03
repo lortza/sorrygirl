@@ -13,7 +13,7 @@ class Apology < ActiveRecord::Base
   end
 
   def assign_image
-    self.image = Image.select
+    self.image = Image.sample
   end
 
 end
