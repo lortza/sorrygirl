@@ -35,4 +35,12 @@ RSpec.describe Apology, :type => :model do
     expect(Apology.ordered).to eq([apology2, apology1])
   end
 
+  it '#assign_image' do
+    filename = 'image.jpg'
+    allow(Image).to receive(:select).and_return(filename)
+
+    apology = Apology.new(body: 'lorem ipsum')
+    expect{apology.assign_image}.to change{apology.image}.from(nil).to(filename)
+  end
+
 end
