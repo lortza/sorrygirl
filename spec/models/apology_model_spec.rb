@@ -29,4 +29,10 @@ RSpec.describe Apology, :type => :model do
     end
   end
 
+  it 'orders apologies by descending created_at' do
+    apology1 = Apology.create!(image: 'image.jpg', body: 'first apology')
+    apology2 = Apology.create!(image: 'image.jpg', body: 'second apology')
+    expect(Apology.ordered).to eq([apology2, apology1])
+  end
+
 end
