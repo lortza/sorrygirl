@@ -1,7 +1,8 @@
 class Apology < ActiveRecord::Base
 
-  before_create :assign_image
   CHARACTER_MAX = 170
+
+  before_validation :assign_image, on: :create
 
   validates :body, presence: true, length: { maximum: CHARACTER_MAX }
   validates :image, presence: true
