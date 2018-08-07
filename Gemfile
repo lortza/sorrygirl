@@ -58,6 +58,7 @@ group :development do
   gem 'pry-awesome_print'
   gem 'better_errors' #creates console in browser for errors
   gem 'binding_of_caller' #goes with better_errors
+  gem "rubycritic", require: false #feedback on app performance
 end
 
 group :test do
