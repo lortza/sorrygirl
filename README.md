@@ -7,6 +7,7 @@ Write an apology... and it comes from Ryan Gosling. Send it to a friend via soci
 * Ruby 2.5.0
 * Rails 5.2.0
 * Postgres
+* RSpec
 
 ### Deployment Note
 Run the seeds file in order to set up the Home and About pages.
