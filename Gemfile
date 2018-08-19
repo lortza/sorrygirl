@@ -44,7 +44,6 @@ group :development, :test do
     gem lib, :git => "https://github.com/rspec/#{lib}.git", :branch => 'master'
   end
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  gem 'rubycritic', require: false # provides stats on code build
 end
 
 group :development do
@@ -58,7 +57,7 @@ group :development do
   gem 'pry-awesome_print'
   gem 'better_errors' #creates console in browser for errors
   gem 'binding_of_caller' #goes with better_errors
-  gem "rubycritic", require: false #feedback on app performance
+  gem 'rubycritic', require: false #feedback on app performance
 end
 
 group :test do
