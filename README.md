@@ -1,5 +1,7 @@
 # Sorry Girl
 
+[![Build Status](https://travis-ci.com/lortza/sorrygirl.svg?branch=master)](https://travis-ci.com/lortza/sorrygirl)
+
 The apology you needed to hear, but from Ryan Gosling.
 
 Write an apology... and it comes from Ryan Gosling. Send it to a friend via social media. https://sorrygirl.herokuapp.com/
