@@ -1,11 +1,12 @@
-require "rails_helper"
+# frozen_string_literal: true
 
-RSpec.describe Apology, :type => :model do
-  let(:apology) { Apology.new(body: 'lorem', image: 'image.jpg') }
+require 'rails_helper'
+
+RSpec.describe Apology, type: :model do
+  let(:apology) { build(:apology) }
   character_max = Apology::CHARACTER_MAX
   string_at_char_max = 'x' * character_max
   string_over_char_max = 'x' * (character_max + 1)
-
 
   describe 'a valid apology' do
     it 'is not valid without a body' do
@@ -41,7 +42,6 @@ RSpec.describe Apology, :type => :model do
     allow(Image).to receive(:sample).and_return(filename)
 
     apology = Apology.new(body: 'lorem ipsum')
-    expect{apology.save}.to change{apology.image}.from(nil).to(filename)
+    expect { apology.save }.to change { apology.image }.from(nil).to(filename)
   end
-
 end

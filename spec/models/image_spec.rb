@@ -1,7 +1,8 @@
-require "rails_helper"
+# frozen_string_literal: true
 
-RSpec.describe Image, :type => :model do
+require 'rails_helper'
 
+RSpec.describe Image, type: :model do
   acceptable_formats = Image::ACCEPTABLE_FORMATS
 
   describe '.sample' do
@@ -29,11 +30,11 @@ RSpec.describe Image, :type => :model do
     end
 
     it "includes the acceptable formats of #{acceptable_formats}" do
-      extensions = Image.filepaths.map {|path| path.match(/([^\.]+$)/)[1]}.uniq
+      regex = /([^\.]+$)/
+      extensions = Image.filepaths.map { |path| path.match(regex)[1] }.uniq
       all_ext_valid = extensions.all? { |ext| acceptable_formats.include?(ext) }
 
       expect(all_ext_valid).to be true
     end
   end
-
 end
