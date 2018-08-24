@@ -1,6 +1,6 @@
-class Page < ActiveRecord::Base
 # frozen_string_literal: true
 
+class Page < ApplicationRecord
   before_validation :generate_slug
 
   validates :name, presence: true

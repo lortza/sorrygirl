@@ -1,6 +1,6 @@
-class Apology < ActiveRecord::Base
 # frozen_string_literal: true
 
+class Apology < ApplicationRecord
   CHARACTER_MAX = 170
 
   before_validation :assign_image, on: :create
