@@ -17,9 +17,9 @@ class Page < ApplicationRecord
   def generate_slug
     self.slug = name.downcase
     self.slug ||= name.parameterize if name
-  end #generate_slug
+  end
 
   def to_param
     slug
-  end #to_param
-end #Page
+  end
+end

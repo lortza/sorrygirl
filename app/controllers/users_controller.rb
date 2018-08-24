@@ -24,23 +24,23 @@ class UsersController < ApplicationController
       redirect_to @user
     else
       render :new
-    end #if
-  end#create
+    end
+  end
 
   def update
     if @user.update(user_params)
       redirect_to @user, notice: "#{@user.first_name}'s account has been successfully updated."
     else
       render :edit
-    end #if
-  end #update
+    end
+  end
 
   def destroy
     @user.destroy
     #TODO: make this so a user can delete another user without being signed out
     session[:user_id] = nil
     redirect_to root_url, alert: "#{@user.first_name}'s account has been successfully deleted."
-  end #destroy
+  end
 
   private
     def set_user

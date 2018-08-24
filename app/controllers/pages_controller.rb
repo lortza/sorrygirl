@@ -6,8 +6,8 @@ class PagesController < ApplicationController
 
   def home
     @page = Page.find_by!(slug: "static-home-page")
-  end #home
 
+  end
 
   def index
     @pages = Page.all
