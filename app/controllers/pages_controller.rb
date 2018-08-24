@@ -5,8 +5,7 @@ class PagesController < ApplicationController
   before_action :require_signin, except: %i[show home]
 
   def home
-    @page = Page.find_by!(slug: "static-home-page")
-
+    @page = Page.find_by!(slug: 'static-home-page')
   end
 
   def index

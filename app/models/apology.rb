@@ -8,7 +8,7 @@ class Apology < ApplicationRecord
   validates :body, presence: true, length: { maximum: CHARACTER_MAX }
   validates :image, presence: true
 
-  scope :ordered, -> { all.order("created_at DESC") }
+  scope :ordered, -> { all.order('created_at DESC') }
 
   def character_max
     CHARACTER_MAX

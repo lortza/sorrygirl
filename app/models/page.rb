@@ -4,15 +4,14 @@ class Page < ApplicationRecord
   before_validation :generate_slug
 
   validates :name, presence: true
-  validates :body, presence: true, length: { maximum: 210}
+  validates :body, presence: true, length: { maximum: 210 }
 
   validates :slug, uniqueness: { case_sensitive: false }
 
   PUBLISH_STATUS = %w[Published Unpublished].freeze
   validates :publish_status, inclusion: { in: PUBLISH_STATUS }
 
-  scope :published, -> { where(:publish_status => 'Published').order("name") }
-
+  scope :published, -> { where(publish_status: 'Published').order('name') }
 
   def generate_slug
     self.slug = name.downcase
