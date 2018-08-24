@@ -243,6 +243,15 @@ GEM
       codeclimate-engine-rb (~> 0.4.0)
       parser (>= 2.5.0.0, < 2.6)
       rainbow (>= 2.0, < 4.0)
+    rubocop (0.58.2)
+      jaro_winkler (~> 1.5.1)
+      parallel (~> 1.10)
+      parser (>= 2.5, != 2.5.1.1)
+      powerpack (~> 0.1)
+      rainbow (>= 2.2.2, < 4.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (~> 1.0, >= 1.0.1)
+    ruby-progressbar (1.10.0)
     ruby_dep (1.5.0)
     ruby_parser (3.11.0)
       sexp_processor (~> 4.9)
@@ -340,6 +349,7 @@ DEPENDENCIES
   rspec-mocks!
   rspec-rails!
   rspec-support!
+  rubocop (~> 0.58.2)
   rubycritic
   sass-rails (~> 5.0)
   selenium-webdriver
