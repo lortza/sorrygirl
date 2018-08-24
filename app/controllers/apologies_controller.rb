@@ -8,15 +8,13 @@ class ApologiesController < ApplicationController
     @apologies = Apology.ordered
   end
 
-  def show
-  end
+  def show; end
 
   def new
     @apology = Apology.new
   end
 
-  def edit
-  end
+  def edit; end
 
   def create
     @apology = Apology.new(apology_params)
