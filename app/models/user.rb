@@ -18,10 +18,6 @@ class User < ApplicationRecord
   before_save :format_username
   before_save :format_email
 
-  def self.authenticate(email_or_username, password)
-    user = User.find_by(email: email_or_username) || User.find_by(username: email_or_username)
-    user && user.authenticate(password)
-  
   def format_username
     self.username = username.downcase
   end
