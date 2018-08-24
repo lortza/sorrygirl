@@ -1,8 +1,8 @@
-class ApologiesController < ApplicationController
-  before_action :set_apology, only: [:show, :edit, :update, :destroy]
 # frozen_string_literal: true
 
-  before_action :require_signin, except: [:show, :new, :create]
+class ApologiesController < ApplicationController
+  before_action :set_apology, only: %i[show edit update destroy]
+  before_action :require_signin, except: %i[show new create]
 
   def index
     @apologies = Apology.ordered

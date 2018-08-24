@@ -8,7 +8,7 @@ class Page < ApplicationRecord
 
   validates :slug, uniqueness: { case_sensitive: false }
 
-  PUBLISH_STATUS = %w(Published Unpublished)
+  PUBLISH_STATUS = %w[Published Unpublished].freeze
   validates :publish_status, inclusion: { in: PUBLISH_STATUS }
 
   scope :published, -> { where(:publish_status => 'Published').order("name") }

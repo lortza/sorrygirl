@@ -1,10 +1,8 @@
-class PagesController < ApplicationController
-  before_action :set_page, only: [:show, :edit, :update, :destroy]
-  #before_action :set_page, except: [:home, :index, :new, :create]
-
-  before_action :require_signin, except: [:show, :home]
 # frozen_string_literal: true
 
+class PagesController < ApplicationController
+  before_action :set_page, only: %i[show edit update destroy]
+  before_action :require_signin, except: %i[show home]
 
   def home
     @page = Page.find_by!(slug: "static-home-page")

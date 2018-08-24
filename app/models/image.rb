@@ -1,8 +1,8 @@
-class Image
 # frozen_string_literal: true
 
+class Image
   IMAGES_DIRECTORY = '/assets/images/'
-  ACCEPTABLE_FORMATS = %w(jpg jpeg png)
+  ACCEPTABLE_FORMATS = %w[jpg jpeg png].freeze
 
   def self.sample
     self.image_file_names.sample
