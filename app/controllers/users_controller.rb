@@ -37,17 +37,27 @@ class UsersController < ApplicationController
 
   def destroy
     @user.destroy
-    #TODO: make this so a user can delete another user without being signed out
+    # TODO: make this so a user can delete another user without being signed out
     session[:user_id] = nil
     redirect_to root_url, alert: "#{@user.first_name}'s account has been successfully deleted."
   end
 
   private
-    def set_user
-      @user = User.find_by!(username: params[:id])
-    end
 
-    def user_params
-      params.require(:user).permit(:first_name, :last_name, :email, :username, :password, :password_confirmation)
-    end
+  def message(user, action)
+    "#{user.first_name}'s account has been successfully #{action}."
+  end
+
+  def set_user
+    @user = User.find_by!(username: params[:id])
+  end
+
+  def user_params
+    params.require(:user).permit(:first_name,
+                                 :last_name,
+                                 :email,
+                                 :username,
+                                 :password,
+                                 :password_confirmation)
+  end
 end

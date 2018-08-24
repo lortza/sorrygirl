@@ -2,39 +2,37 @@
 
 <div class="container">
 
-<h1>Pages Index</h1>
-<%= link_to ' New Page', new_page_path, class: "btn btn-default btn-sm fa fa-plus" %>
+  <h1>Pages Index</h1>
+  <%= link_to ' New Page', new_page_path, class: "btn btn-default btn-sm fa fa-plus" %>
 
 
-<table class="table">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Publish Status</th>
-      <th>Permalink</th>
-      <th>Heading</th>
-      <th>Body</th>
-      <th colspan="3">Manage</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @pages.each do |page| %>
+  <table class="table">
+    <thead>
       <tr>
-        <td><%= page.name %></td>
-        <td><%= page.publish_status %></td>
-        <td><%= page.slug %></td>
-        <td><%= page.heading %></td>
-        <td><%= page.body %></td>
-        <td><%= link_to 'Show', page %></td>
-        <td><%= link_to 'Edit', edit_page_path(page) %></td>
-        <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Name</th>
+        <th>Publish Status</th>
+        <th>Permalink</th>
+        <th>Heading</th>
+        <th>Body</th>
+        <th colspan="3">Manage</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
-
+    <tbody>
+      <% @pages.each do |page| %>
+        <tr>
+          <td><%= page.name %></td>
+          <td><%= page.publish_status %></td>
+          <td><%= page.slug %></td>
+          <td><%= page.heading %></td>
+          <td><%= page.body %></td>
+          <td><%= link_to 'Show', page %></td>
+          <td><%= link_to 'Edit', edit_page_path(page) %></td>
+          <td><%= link_to 'Destroy', page, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
 
 </div><!-- container -->

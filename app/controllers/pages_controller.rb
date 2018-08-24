@@ -44,11 +44,12 @@ class PagesController < ApplicationController
   end
 
   private
-    def set_page
-      @page = Page.find_by!(slug: params[:id])
-    end
 
-    def page_params
-      params.require(:page).permit(:name, :slug, :heading, :body, :publish_status)
-    end
+  def set_page
+    @page = Page.find_by!(slug: params[:id])
+  end
+
+  def page_params
+    params.require(:page).permit(:name, :slug, :heading, :body, :publish_status)
+  end
 end
