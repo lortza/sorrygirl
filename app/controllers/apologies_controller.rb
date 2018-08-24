@@ -28,7 +28,7 @@ class ApologiesController < ApplicationController
 
   def update
     if @apology.update(apology_params)
-      redirect_to @apology, notice: 'Apology was successfully updated.'
+      redirect_to @apology, notice: message(@apology, 'updated')
     else
       render :edit
     end
@@ -36,15 +36,20 @@ class ApologiesController < ApplicationController
 
   def destroy
     @apology.destroy
-      redirect_to apologies_url, notice: 'Apology was successfully destroyed.'
+    redirect_to apologies_url, notice: message(@apology, 'deleted')
   end
 
   private
-    def set_apology
-      @apology = Apology.find(params[:id])
-    end
 
-    def apology_params
-      params.require(:apology).permit(:body, :image)
-    end
+  def message(apology, action)
+    "#{apology.class.name} was successfully #{action}."
+  end
+
+  def set_apology
+    @apology = Apology.find(params[:id])
+  end
+
+  def apology_params
+    params.require(:apology).permit(:body, :image)
+  end
 end

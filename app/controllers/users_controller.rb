@@ -29,7 +29,7 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to @user, notice: "#{@user.first_name}'s account has been successfully updated."
+      redirect_to @user, notice: message(@user, 'updated')
     else
       render :edit
     end
@@ -39,7 +39,7 @@ class UsersController < ApplicationController
     @user.destroy
     # TODO: make this so a user can delete another user without being signed out
     session[:user_id] = nil
-    redirect_to root_url, alert: "#{@user.first_name}'s account has been successfully deleted."
+    redirect_to root_url, alert: message(@user, 'deleted')
   end
 
   private
