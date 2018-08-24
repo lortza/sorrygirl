@@ -4,8 +4,6 @@ class SessionsController < ApplicationController
   end #new
 
   def create
-     user = User.find_by(email: params[:email])
-     if user && user.authenticate(params[:password])
        session[:user_id] = user.id
        flash[:notice] = "Welcome back, #{user.first_name}!"
        redirect_to(session[:intended_url] || user)
@@ -15,6 +13,9 @@ class SessionsController < ApplicationController
       render :new
      end #if
    end #create
+    user = GuaranteedUser.find_by(email: params[:email])
+
+    if user.authenticate(params[:password])
 
    def destroy
      session[:user_id] = nil 
