@@ -17,5 +17,4 @@ class Apology < ApplicationRecord
   def assign_image
     self.image = Image.sample
   end
-
 end

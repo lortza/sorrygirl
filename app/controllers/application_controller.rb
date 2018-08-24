@@ -27,8 +27,6 @@ private
 
   # This makes the pages show up in the navbar
   def set_pages
-    
-
     @pages = Page.all
   end
 end

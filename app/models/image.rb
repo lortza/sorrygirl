@@ -17,5 +17,4 @@ class Image
   def self.filepaths
     Dir.glob("*#{IMAGES_DIRECTORY}*.{#{ACCEPTABLE_FORMATS.join(',')}}")
   end
-
 end
