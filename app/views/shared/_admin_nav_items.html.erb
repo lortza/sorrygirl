@@ -1,0 +1,21 @@
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Manage Content
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <%= link_to "Apologies Index", apologies_path, class: 'dropdown-item' %>
+    <%= link_to "Create New Apology", new_apology_path, class: 'dropdown-item' %>
+    <%= link_to "Pages Index", pages_path, class: 'dropdown-item' %>
+  </div>
+</li>
+
+<li class="nav-item dropdown">
+  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <%= current_user.first_name %>
+  </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <%= link_to 'Sign Out', session_path, method: :delete, class: 'dropdown-item' %>
+    <%= link_to 'My Profile', current_user, class: 'dropdown-item' %>
+    <%= link_to 'All Users', users_path, class: 'dropdown-item' %>
+  </div>
+</li>
