@@ -3,6 +3,7 @@ class PagesController < ApplicationController
   #before_action :set_page, except: [:home, :index, :new, :create]
 
   before_action :require_signin, except: [:show, :home]
+# frozen_string_literal: true
 
 
   def home

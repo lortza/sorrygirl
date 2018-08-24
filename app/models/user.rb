@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   
+# frozen_string_literal: true
   has_secure_password
   validates :password, length: { minimum: 5, allow_blank: true }
   validates :first_name, :last_name, presence: true

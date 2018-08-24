@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class SessionsController < ApplicationController
   def new
     @background_image = "grass-1383426-1599x1066.jpg"

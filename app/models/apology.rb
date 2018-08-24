@@ -1,4 +1,5 @@
 class Apology < ActiveRecord::Base
+# frozen_string_literal: true
 
   CHARACTER_MAX = 170
 

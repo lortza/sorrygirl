@@ -1,4 +1,5 @@
 class Image
+# frozen_string_literal: true
 
   IMAGES_DIRECTORY = '/assets/images/'
   ACCEPTABLE_FORMATS = %w(jpg jpeg png)

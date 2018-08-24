@@ -1,4 +1,5 @@
 class Page < ActiveRecord::Base
+# frozen_string_literal: true
 
   before_validation :generate_slug
 
