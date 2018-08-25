@@ -5,13 +5,11 @@ class Image
   ACCEPTABLE_FORMATS = %w[jpg jpeg png].freeze
 
   def self.sample
-    self.image_file_names.sample
+    image_file_names.sample
   end
 
-  private
-
   def self.image_file_names
-    self.filepaths.map { |path| File.basename(path) }
+    filepaths.map { |path| File.basename(path) }
   end
 
   def self.filepaths
