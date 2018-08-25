@@ -16,3 +16,5 @@ Metrics/BlockLength:
     - !ruby/regexp /.*_spec\.rb$/
 Metrics/LineLength:
   Max: 99
+Naming/UncommunicativeMethodParamName:
+  AllowedNames: [_]
