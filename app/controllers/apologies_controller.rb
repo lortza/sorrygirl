@@ -20,8 +20,9 @@ class ApologiesController < ApplicationController
     @apology = Apology.new(apology_params)
 
     if @apology.save
-      redirect_to @apology, notice: 'Next Step: Share your apology via the social media links below.'
+      redirect_to @apology, flash: { social_media_share: 'Send via Social Media' }
     else
+      flash.now[:alert] = 'Something went wrong. Ryan apologizes for that.'
       render :new
     end
   end

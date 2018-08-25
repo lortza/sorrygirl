@@ -91,14 +91,22 @@ div {
   }
 }
 
-#notice {
+@mixin flashes($color) {
   text-align: center;
-  border: 1px solid green;
+  border: 1px solid $color;
   border-radius: 5px;
   padding: 10px;
-  color: green;
+  color: $color;
   width: 100%;
-  background-color: lighten(green, 65%);
+  background-color: lighten($color, 65%);
+}
+
+#notice {
+  @include flashes(green);
+}
+
+#alert {
+  @include flashes(red);
 }
 
 .field_with_errors {
