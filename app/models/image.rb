@@ -5,9 +5,14 @@ class Image
   ACCEPTABLE_FORMATS = %w[jpg jpeg png].freeze
 
   class << self
-    def sample
-      image_file_names.sample
-    end
+    delegate :sample, to: :image_file_names
+
+    # I prefer this version over the rubocop suggestion to delegate
+    # because its intention is more clear to me.
+
+    # def sample
+    #   image_file_names.sample
+    # end
 
     private
 
