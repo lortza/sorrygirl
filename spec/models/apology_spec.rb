@@ -14,7 +14,9 @@ RSpec.describe Apology, type: :model do
       expect(apology).to_not be_valid
     end
 
-    xit 'is not valid without an image' do
+    it 'is assigned an image before validation' do
+      apology.image = nil
+      expect(apology).to_not be nil
     end
 
     it "permits up to #{character_max} characters in the body field" do
