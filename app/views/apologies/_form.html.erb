@@ -1,10 +1,10 @@
 <div class="row">
   <div class="col-xs-12 col-sm-8 offset-sm-2 col-lg-4 offset-lg-4">
-    <%= form_for(@apology) do |f| %>
-      <%= render partial: 'shared/errors', locals: {object: @apology} %>
+    <%= form_for(apology) do |f| %>
+      <%= render partial: 'shared/errors', locals: {object: apology} %>
 
       <div id="apology-content" class="field">
-        <div class="character-count-container"><span id="character-count"><%= @apology.character_max %></span> characters remaining</div>
+        <div class="character-count-container"><span id="character-count"><%= apology.character_max %></span> characters remaining</div>
         <%= f.text_area :body, autofocus: true, required: true, placeholder: "Hey Girl, I'm sorry I was such a jerkface...", class: 'form-control' %>
       </div>
 
@@ -16,5 +16,5 @@
 </div>
 
 <script>
-  remainingCharacters(<%= @apology.character_max %>)
+  remainingCharacters(<%= apology.character_max %>)
 </script>
