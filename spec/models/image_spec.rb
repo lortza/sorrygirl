@@ -19,19 +19,19 @@ RSpec.describe Image, type: :model do
       filepaths = ['/ipsum/image.jpg', '/ipsum/image.pdf']
       allow(Image).to receive(:filepaths).and_return(filepaths)
 
-      expect(Image.image_file_names.any?('/ipsum/')).to be false
-      expect(Image.image_file_names.first).to eq('image.jpg')
+      expect(Image.send(:image_file_names).any?('/ipsum/')).to be false
+      expect(Image.send(:image_file_names).first).to eq('image.jpg')
     end
   end
 
   describe '.filepaths' do
     it "excludes formats other than #{acceptable_formats}" do
-      expect(Image.filepaths.exclude?('.pdf')).to be true
+      expect(Image.send(:filepaths).exclude?('.pdf')).to be true
     end
 
     it "includes the acceptable formats of #{acceptable_formats}" do
       regex = /([^\.]+$)/
-      extensions = Image.filepaths.map { |path| path.match(regex)[1] }.uniq
+      extensions = Image.send(:filepaths).map { |path| path.match(regex)[1] }.uniq
       all_ext_valid = extensions.all? { |ext| acceptable_formats.include?(ext) }
 
       expect(all_ext_valid).to be true
