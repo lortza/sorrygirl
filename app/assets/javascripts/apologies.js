@@ -18,9 +18,9 @@ let remainingCharacters = function(characterMax){
         formInputArea.classList.add('exceeded-limit')
         submitButton.disabled = true
         submitButton.classList.add('btn-secondary')
-
       }
     }
+
     document.addEventListener('keyup', displayRemainingCharacters)
   });
 }
