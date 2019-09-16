@@ -40,11 +40,6 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'rubocop', '~> 0.58.2', require: false
 gem 'social-share-button' # social media sharing buttons
 
-# Security Patches
-gem "nokogiri", ">= 1.8.5"
-gem "rack", ">= 2.0.6"
-gem "loofah", ">= 2.2.3"
-
 group :development, :test do
   %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
     gem lib, git: "https://github.com/rspec/#{lib}.git", branch: 'master'
