@@ -1,6 +1,6 @@
 # Sorry Girl
 
-[![Build Status](https://travis-ci.com/lortza/sorrygirl.svg?branch=master)](https://travis-ci.com/lortza/sorrygirl)
+[![CircleCI](https://circleci.com/gh/lortza/sorrygirl.svg?style=svg)](https://circleci.com/gh/lortza/sorrygirl)
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/73d94f9055777a075fcf/maintainability)](https://codeclimate.com/github/lortza/sorrygirl/maintainability)
 
