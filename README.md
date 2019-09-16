@@ -8,7 +8,7 @@ The apology you needed to hear, but from Ryan Gosling.
 
 Write an apology... and it comes from Ryan Gosling. Send it to a friend via social media. https://sorrygirl.herokuapp.com/
 
-* Ruby 2.5.0
+* Ruby 2.5.3
 * Rails 5.2.0
 * Postgres
 * RSpec
