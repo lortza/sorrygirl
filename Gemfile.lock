@@ -244,8 +244,8 @@ GEM
     psych (3.1.0-x64-mingw32)
     psych (3.1.0-x86-mingw32)
     public_suffix (3.0.3)
-    puma (3.12.1)
-    puma (3.12.1-java)
+    puma (3.12.2)
+    puma (3.12.2-java)
     rack (2.0.7)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -396,7 +396,7 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   pry-awesome_print
   pry-rails
-  puma (~> 3.11)
+  puma (~> 3.12)
   rails (~> 5.2.0)
   rspec-core!
   rspec-expectations!
