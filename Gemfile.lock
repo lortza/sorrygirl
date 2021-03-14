@@ -362,7 +362,7 @@ DEPENDENCIES
   pry-awesome_print
   pry-rails
   puma (~> 3.11)
-  rails (~> 5.2.3)
+  rails (~> 5.2.4, >= 5.2.4.5)
   rspec-rails (~> 4.1.0)
   rubocop (~> 0.58.2)
   rubycritic
