@@ -326,9 +326,6 @@ GEM
     thread_safe (0.3.6-java)
     tilt (2.0.10)
     tty-which (0.4.2)
-    turbolinks (5.2.1)
-      turbolinks-source (~> 5.2)
-    turbolinks-source (5.2.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2021.1)
@@ -393,7 +390,6 @@ DEPENDENCIES
   shoulda-matchers (~> 3.0)
   social-share-button
   spring
-  turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)
   webdrivers
