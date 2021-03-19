@@ -2,7 +2,8 @@
   "name": "sorrygirl",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "5.2.1"
+    "@rails/webpacker": "5.2.1",
+    "rails-ujs": "^5.2.4-5"
   },
   "version": "0.1.0",
   "devDependencies": {
