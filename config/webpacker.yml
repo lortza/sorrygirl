@@ -6,8 +6,7 @@ default: &default
   public_root_path: public
   public_output_path: packs
   cache_path: tmp/cache/webpacker
-  yarn_check_integrity: false
-  webpack_compile_output: false
+  webpack_compile_output: true
 
   # Additional paths webpack should lookup modules
   # ['app/assets', 'engine/foo/app/assets']
@@ -17,7 +16,7 @@ default: &default
   cache_manifest: false
 
   # Extract and emit a css file
-  extract_css: true
+  extract_css: false
 
   static_assets_extensions:
     - .jpg
@@ -50,16 +49,12 @@ default: &default
 
 development:
   <<: *default
-  compile: false
-
-  # Verifies that versions and hashes of the packace contents in the package.json
-  yarn_check_integrity: false
-
+  compile: true
 
   # Reference: https://webpack.js.org/configuration/dev-server/
   dev_server:
     https: false
-    host: webpacker
+    host: localhost
     port: 3035
     public: localhost:3035
     hmr: false
@@ -79,7 +74,7 @@ development:
 
 test:
   <<: *default
-  compile: false
+  compile: true
 
   # Compile test packs to a separate directory
   public_output_path: packs-test
