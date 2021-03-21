@@ -16,6 +16,8 @@ $apology-width: 650px;
   }
 }
 .apology-container {
+  width: $apology-width;
+  margin: 0 auto;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
@@ -27,7 +29,7 @@ $apology-width: 650px;
 }
 .right-column {
   width: $apology-width / 2;
-  padding: 30px 30px 5px 0px;
+  padding: 30px 30px 5px 10px;
   overflow-wrap: break-word;
   .note {
     font-family: $apology-font;
