@@ -14,25 +14,25 @@ $apology-width: 650px;
   .index-image {
     width: 40px;
   }
-  .apology-container {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
+}
+.apology-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-family: $apology-font;
+  border: 1px solid #A1A1A1;
+  background-color: #FFF;
+  height: 400px;
+}
+.right-column {
+  width: $apology-width / 2;
+  padding: 30px 30px 5px 0px;
+  overflow-wrap: break-word;
+  .note {
     font-family: $apology-font;
-    border: 1px solid #A1A1A1;
-    background-color: #FFF;
-    height: 400px;
-  }
-  .right-column {
-    width: $apology-width / 2;
-    padding: 30px 30px 5px 0px;
-    overflow-wrap: break-word;
-    .note {
-      font-family: $apology-font;
-      font-size: 1.3em;
-      line-height: 140%;
-    }
+    font-size: 1.3em;
+    line-height: 140%;
   }
 }
 
