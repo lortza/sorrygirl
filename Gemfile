@@ -28,8 +28,7 @@ gem 'bcrypt', '~> 3.1.7'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
 gem 'rubocop', '~> 0.58.2', require: false
-gem 'social-share-button' # social media sharing buttons
-
+gem 'rails-social-share-button' # social media sharing buttons
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

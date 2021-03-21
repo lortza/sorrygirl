@@ -1,16 +1,18 @@
 <% content_for(:description, @apology.body) %>
 
 <div class="apology-wrapper">
-
   <div class="create-button-wrapper">
     <%= link_to "Edit", edit_apology_path, class: "btn btn-info btn-sm" if current_user%>
-  </div> <!-- create-button-wrapper -->
+  </div>
 
-  <article>
-    <%= image_tag(@apology.image) %>
-    <div class="note">
-      <p><%= @apology.body %></p>
-      <p>Love,<br>Ryan</p>
-    </div> <!-- note -->
-  </article>
-</div> <!-- apology-wrapper -->
+  <div class='apology-container'>
+    <div>
+      <%= image_tag(@apology.image) %>
+    </div>
+      
+    <div class="right-column">
+      <p class='note'><%= @apology.body %></p>
+      <p class='note'>Love,<br>Ryan</p>
+    </div>
+  </div>
+</div>
