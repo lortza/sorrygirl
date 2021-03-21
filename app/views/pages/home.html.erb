@@ -4,17 +4,21 @@
     <%= link_to " Edit", edit_page_path(@page), class: "btn btn-primary btn-sm" %>
     <% end %><!-- current_user -->
   </div> <!-- create-button-wrapper -->
-
-  <article class="pages">
-    <%= image_tag("ryan-gosling01.jpg") %>
-    <div class="note">
-      <p>Hey Girl,</p>
-      <p><%= simple_format(@page.body) %></p>
-      <div class="btn-wrapper">
-        <%= link_to "Write an Apology", new_apology_path, class: "btn btn-primary btn-xl" %>
-      </div> <!-- btn-wrapper -->
-
-    </div> <!-- note -->
-  </article><!-- pages -->
-
 </div> <!-- apology-wrapper -->
+
+
+<div class='apology-container'>
+  <div>
+    <%= image_tag("ryan-gosling01.jpg") %>
+  </div>
+    
+  <div class="right-column">
+    <p class='note'>Hey Girl,</p>
+    <p class='note'><%= @page.body %></p>
+
+    <div class="btn-wrapper">
+      <%= link_to "Write an Apology", new_apology_path, class: "btn btn-primary btn-xl" %>
+    </div>
+  </div>
+</div>
+

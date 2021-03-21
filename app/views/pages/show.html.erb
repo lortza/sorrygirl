@@ -8,12 +8,16 @@
     <%= link_to " Edit", edit_page_path, class: "btn btn-default btn-sm fa fa-pencil" %>
     <% end %>
   </div> <!-- create-button-wrapper -->
-
-  <article class="pages">
-    <%= image_tag("ryan-gosling01.jpg") %>
-    <div class="note">
-      <h3><%= @page.heading %></h3>
-      <p><%= simple_format(@page.body) %></p>
-    </div> <!-- note -->
-  </article>
 </div> <!-- apology-wrapper -->
+
+
+<div class='apology-container'>
+  <div>
+    <%= image_tag("ryan-gosling01.jpg") %>
+  </div>
+    
+  <div class="right-column">
+    <h3><%= @page.heading %></h3>
+    <p class='note'><%= @page.body %></p>
+  </div>
+</div>

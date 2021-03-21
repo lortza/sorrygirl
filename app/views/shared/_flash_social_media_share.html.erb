@@ -1,4 +1,4 @@
 <div class="show-share-partial">
   <h3>Now <%= message %>:</h3>
-  <%= social_share_button_tag(page_description, :url => request.original_url, desc: page_description, title: page_title) %>
+  <%= rails_social_share_button_tag(page_description, :url => request.original_url, desc: page_description, title: page_title) %>
 </div>

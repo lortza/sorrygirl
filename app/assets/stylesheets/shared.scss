@@ -58,6 +58,11 @@ ul.copyright {
 } /* .brand */
 
 
+/* BOOTSTRAP OVERRIDES */
+.btn {
+  font-family: sans-serif;
+}
+
 /* SOCIAL-SHARE-BUTTON GEM */
 .social-share-button {
   $size: 30px;
