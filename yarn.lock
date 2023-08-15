@@ -3986,10 +3986,10 @@ is-svg@^3.0.0:
   dependencies:
     html-comment-regex "^1.1.0"
 
-is-svg@^4.3.1:
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/is-svg/-/is-svg-4.3.1.tgz#8c63ec8c67c8c7f0a8de0a71c8c7d58eccf4406b"
-  integrity sha512-h2CGs+yPUyvkgTJQS9cJzo9lYK06WgRiXUqBBHtglSzVKAuH4/oWsqk7LGfbSa1hGk9QcZ0SyQtVggvBA8LZXA==
+is-svg@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/is-svg/-/is-svg-4.3.0.tgz#3e46a45dcdb2780e42a3c8538154d7f7bfc07216"
+  integrity sha512-Np3TOGLVr0J27VDaS/gVE7bT45ZcSmX4pMmMTsPjqO8JY383fuPIcWmZr3QsHVWhqhZWxSdmW+tkkl3PWOB0Nw==
   dependencies:
     fast-xml-parser "^3.19.0"
 
